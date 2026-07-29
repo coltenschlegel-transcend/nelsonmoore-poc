@@ -163,21 +163,14 @@
       '<a href="' +
       B.privacyChoicesUrl +
       '" target="_blank" rel="noopener noreferrer">Your Privacy Choices</a>' +
-      '<a href="#" id="showConsentBanner">Cookie Preferences</a>' +
+      // Cookie Preferences → Privacy Center for now; later can reopen consent manager via transcend.showConsentManager
+      '<a href="' +
+      B.privacyCenterUrl +
+      '" target="_blank" rel="noopener noreferrer" id="showConsentBanner">Cookie Preferences</a>' +
       "</div></div></div></footer>";
 
     var year = document.getElementById("year");
     if (year) year.textContent = String(new Date().getFullYear());
-
-    var consent = document.getElementById("showConsentBanner");
-    if (consent) {
-      consent.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (typeof transcend !== "undefined" && transcend.showConsentManager) {
-          transcend.showConsentManager({ viewState: "AcceptOrRejectAll" });
-        }
-      });
-    }
   }
 
   function wireNewsletter() {
