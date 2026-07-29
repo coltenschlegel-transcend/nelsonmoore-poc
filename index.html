@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Brand tokens first; Airgap injected sync from NM_BRAND.airgapSrc -->
+  <script src="js/brand.js"></script>
+  <script>
+    (function () {
+      var b = window.NM_BRAND;
+      if (!b) return;
+      document.write(
+        '<script data-cfasync="false" data-tracker-overrides="' +
+          b.airgapOverrides +
+          '" src="' +
+          b.airgapSrc +
+          '" crossorigin="anonymous"><\/script>'
+      );
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nelson Moore</title>
+  <meta name="description" content="Nelson Moore — heritage apparel and knitwear. Est. London 1912. Where land meets loom." />
+  <meta property="og:title" content="Nelson Moore" />
+  <meta property="og:description" content="Heritage apparel. Where land meets loom." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&family=Marcellus&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
+</head>
+<body class="page-home">
+  <!-- Header overlays hero at scroll top (transparent); solidifies on scroll -->
+  <div id="nm-header"></div>
+
+  <section class="hero" data-nm-hero aria-label="Hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title" data-nm-hero-title><span class="hero-line">Where Land</span><span class="hero-line">Meets Loom</span></h1>
+      <a class="btn btn-primary" data-nm-hero-cta href="shop.html">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Live site places the marquee under the hero, not above the nav -->
+  <div id="nm-announcement"></div>
+
+  <section class="section" id="new-in">
+    <div class="container">
+      <h2 class="section-title" data-nm-newin-title>New In</h2>
+      <div class="product-grid" data-nm-products></div>
+    </div>
+  </section>
+
+  <section class="editorial" data-nm-editorial aria-label="Fall collection">
+    <div class="editorial-copy">
+      <p class="eyebrow" data-nm-fall-eyebrow>Fall Collection</p>
+      <h2 data-nm-fall-headline>Heritage, Renewed</h2>
+      <div class="editorial-actions">
+        <a class="btn btn-primary" data-nm-shop-all href="shop.html">Shop All</a>
+        <a class="link-underline" data-nm-lookbook-link href="#lookbook">Explore Our Lookbook</a>
+      </div>
+    </div>
+    <div class="editorial-media">
+      <img data-nm-editorial-img src="assets/visualelectric-1755825347324.png" alt="Fall collection" />
+    </div>
+  </section>
+
+  <section class="section" id="lookbook">
+    <div class="container">
+      <h2 class="section-title" data-nm-lookbook-title>Explore Our Lookbook</h2>
+      <div class="lookbook-grid" data-nm-lookbook-grid></div>
+    </div>
+  </section>
+
+  <!-- Newsletter: client stub; wire to Transcend Preference Management (Newsletters/Marketing) when available -->
+  <section class="section newsletter" id="signup">
+    <div class="container">
+      <p class="eyebrow" data-nm-news-eyebrow>Subscribe to our newsletter</p>
+      <h2 class="section-title" data-nm-news-headline>Get The Latest</h2>
+      <p data-nm-news-body>Sign up with your email to receive news about new collections, events and sales.</p>
+      <form class="newsletter-form" data-nm-newsletter action="#" method="post">
+        <label class="sr-only" for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Email Address" required autocomplete="email" />
+        <button class="btn btn-primary" type="submit" data-nm-news-cta>Sign Up</button>
+      </form>
+      <div class="form-status" data-nm-newsletter-status role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div id="nm-footer"></div>
+
+  <script src="trackers.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

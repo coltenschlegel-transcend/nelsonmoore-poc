@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script src="js/brand.js"></script>
+  <script>
+    (function () {
+      var b = window.NM_BRAND;
+      if (!b) return;
+      document.write(
+        '<script data-cfasync="false" data-tracker-overrides="' +
+          b.airgapOverrides +
+          '" src="' +
+          b.airgapSrc +
+          '" crossorigin="anonymous"><\/script>'
+      );
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart — Nelson Moore</title>
+  <meta name="description" content="Your Nelson Moore shopping cart." />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&family=Marcellus&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
+</head>
+<body>
+  <div id="nm-announcement"></div>
+  <div id="nm-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Cart</h1>
+    </div>
+  </section>
+
+  <div class="cart-panel">
+    <p data-nm-cart-empty>Your cart is empty.</p>
+    <p style="margin:24px 0 0">
+      <a class="btn btn-primary" href="shop.html">Continue Shopping</a>
+    </p>
+  </div>
+
+  <div id="nm-footer"></div>
+  <script src="trackers.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

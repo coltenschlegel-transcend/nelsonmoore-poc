@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script src="js/brand.js"></script>
+  <script>
+    (function () {
+      var b = window.NM_BRAND;
+      if (!b) return;
+      document.write(
+        '<script data-cfasync="false" data-tracker-overrides="' +
+          b.airgapOverrides +
+          '" src="' +
+          b.airgapSrc +
+          '" crossorigin="anonymous"><\/script>'
+      );
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loyalty — Nelson Moore</title>
+  <meta name="description" content="Join the Nelson Moore rewards program for early access, discounts, and VIP invites." />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&family=Marcellus&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
+</head>
+<body>
+  <div id="nm-announcement"></div>
+  <div id="nm-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-nm-rewards-headline>Join our rewards program</h1>
+    </div>
+  </section>
+
+  <p class="page-body" data-nm-rewards-body></p>
+
+  <div class="container" style="text-align:center;padding-bottom:72px">
+    <a class="btn btn-primary" href="contact.html">Get in Touch</a>
+  </div>
+
+  <section class="section newsletter">
+    <div class="container">
+      <p class="eyebrow">Subscribe to our newsletter</p>
+      <h2 class="section-title">Get The Latest</h2>
+      <p>Sign up with your email to receive news about new collections, events and sales.</p>
+      <form class="newsletter-form" data-nm-newsletter action="#" method="post">
+        <label class="sr-only" for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Email Address" required autocomplete="email" />
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+      </form>
+      <div class="form-status" data-nm-newsletter-status role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div id="nm-footer"></div>
+  <script src="trackers.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

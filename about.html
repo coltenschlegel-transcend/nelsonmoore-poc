@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script src="js/brand.js"></script>
+  <script>
+    (function () {
+      var b = window.NM_BRAND;
+      if (!b) return;
+      document.write(
+        '<script data-cfasync="false" data-tracker-overrides="' +
+          b.airgapOverrides +
+          '" src="' +
+          b.airgapSrc +
+          '" crossorigin="anonymous"><\/script>'
+      );
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Nelson Moore</title>
+  <meta name="description" content="About Nelson Moore — heritage British luxury fashion since 1912." />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&family=Marcellus&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
+</head>
+<body>
+  <div id="nm-announcement"></div>
+  <div id="nm-header"></div>
+
+  <section class="split-panel" aria-label="About Nelson Moore">
+    <div class="split-copy">
+      <h1 data-nm-about-headline>About Us</h1>
+      <p class="split-body" data-nm-about-body></p>
+    </div>
+    <div class="split-media">
+      <img data-nm-about-split src="assets/about-hero.png" alt="Nelson Moore knitwear in the landscape" />
+    </div>
+  </section>
+
+  <section class="section newsletter">
+    <div class="container">
+      <p class="eyebrow">Subscribe to our newsletter</p>
+      <h2 class="section-title">Get The Latest</h2>
+      <p>Sign up with your email to receive news about new collections, events and sales.</p>
+      <form class="newsletter-form" data-nm-newsletter action="#" method="post">
+        <label class="sr-only" for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Email Address" required autocomplete="email" />
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+      </form>
+      <div class="form-status" data-nm-newsletter-status role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="page-band" aria-label="About gallery">
+    <img data-nm-about-band src="assets/about-band.png" alt="Nelson Moore fall editorial" />
+  </section>
+
+  <div id="nm-footer"></div>
+  <script src="trackers.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
