@@ -23,7 +23,7 @@ Open http://localhost:8000/
 | `index.html` | Homepage (announcement, hero, New In, Fall Collection, lookbook, newsletter) |
 | `shop.html` / `about.html` / `contact.html` / `rewards.html` / `cart.html` | Secondary pages |
 | `trackers.js` | Always-on demo trackers (Airgap gates until consent) |
-| `assets/` | Owned logo + imagery |
+| `assets/` | Owned logo + imagery (WebP, resized for web; lazy-loaded below the fold) |
 
 ## Transcend plumbing
 

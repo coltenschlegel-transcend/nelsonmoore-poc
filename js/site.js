@@ -246,7 +246,7 @@
             p.image +
             '" alt="' +
             p.name +
-            '">' +
+            '" loading="lazy" decoding="async" width="800" height="800">' +
             "<h3>" +
             p.name +
             "</h3>" +
@@ -269,6 +269,8 @@
       if (img) {
         img.src = B.images.editorial;
         img.alt = B.copy.fallHeadline;
+        img.loading = "lazy";
+        img.decoding = "async";
       }
       if (shopAll) {
         shopAll.textContent = B.copy.shopAll;
@@ -285,7 +287,11 @@
       lookGrid.innerHTML = B.images.lookbook
         .map(function (src, i) {
           return (
-            '<img src="' + src + '" alt="Nelson Moore lookbook ' + (i + 1) + '">'
+            '<img src="' +
+            src +
+            '" alt="Nelson Moore lookbook ' +
+            (i + 1) +
+            '" loading="lazy" decoding="async">'
           );
         })
         .join("");
@@ -319,7 +325,7 @@
           p.image +
           '" alt="' +
           p.name +
-          '">' +
+          '" loading="lazy" decoding="async" width="800" height="800">' +
           "<h3>" +
           p.name +
           "</h3>" +
@@ -337,8 +343,23 @@
     if (b) b.textContent = B.copy.aboutBody;
     var split = document.querySelector("[data-nm-about-split]");
     var band = document.querySelector("[data-nm-about-band]");
-    if (split && B.images.aboutSplit) split.src = B.images.aboutSplit;
-    if (band && B.images.aboutBand) band.src = B.images.aboutBand;
+    if (split && B.images.aboutSplit) {
+      split.src = B.images.aboutSplit;
+      if (B.images.aboutSplitSrcset) {
+        split.srcset = B.images.aboutSplitSrcset;
+        split.sizes = "(max-width: 960px) 100vw, 50vw";
+      }
+      split.fetchPriority = "high";
+    }
+    if (band && B.images.aboutBand) {
+      band.src = B.images.aboutBand;
+      if (B.images.aboutBandSrcset) {
+        band.srcset = B.images.aboutBandSrcset;
+        band.sizes = "100vw";
+      }
+      band.loading = "lazy";
+      band.decoding = "async";
+    }
   }
 
   function fillContact() {
@@ -361,8 +382,23 @@
     }
     var portrait = document.querySelector("[data-nm-contact-portrait]");
     var band = document.querySelector("[data-nm-contact-band]");
-    if (portrait && B.images.contactPortrait) portrait.src = B.images.contactPortrait;
-    if (band && B.images.contactBand) band.src = B.images.contactBand;
+    if (portrait && B.images.contactPortrait) {
+      portrait.src = B.images.contactPortrait;
+      if (B.images.contactPortraitSrcset) {
+        portrait.srcset = B.images.contactPortraitSrcset;
+        portrait.sizes = "(max-width: 960px) 100vw, 50vw";
+      }
+      portrait.fetchPriority = "high";
+    }
+    if (band && B.images.contactBand) {
+      band.src = B.images.contactBand;
+      if (B.images.contactBandSrcset) {
+        band.srcset = B.images.contactBandSrcset;
+        band.sizes = "100vw";
+      }
+      band.loading = "lazy";
+      band.decoding = "async";
+    }
   }
 
   function fillRewards() {
