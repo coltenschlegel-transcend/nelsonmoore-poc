@@ -17,7 +17,7 @@ window.NM_BRAND = {
      (https://transcend-cdn.com/cm/<BUNDLE-ID>/airgap.js), commit to main,
      and Pages redeploys in under a minute. See README. */
   airgapSrc:
-    "https://transcend-cdn.com/cm/afb7f6ea-772c-4c18-ac1f-4de68254ab75/airgap.js",
+  src="https://transcend-cdn.com/cm/afb7f6ea-772c-4c18-ac1f-4de68254ab75/airgap.js"
   airgapOverrides: "GoogleConsentMode FacebookLDU",
   privacyCenterUrl: "https://privacy.nelsonmoore.us/",
   privacyPolicyUrl: "https://privacy.nelsonmoore.us/policies",
