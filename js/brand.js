@@ -12,7 +12,10 @@ window.NM_BRAND = {
   positioning: "Where Land Meets Loom",
   voice: "Heritage, Renewed",
 
-  /* Transcend plumbing — Nelson Moore production */
+  /* Transcend plumbing — Nelson Moore production.
+     POC EDIT POINT: swap airgapSrc for your own bundle
+     (https://transcend-cdn.com/cm/<BUNDLE-ID>/airgap.js), commit to main,
+     and Pages redeploys in under a minute. See README. */
   airgapSrc:
     "https://transcend-cdn.com/cm/86e3d946-871d-49e5-9472-5cf0f8799b53/airgap.js",
   airgapOverrides: "GoogleConsentMode FacebookLDU",
